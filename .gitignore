@@ -1,0 +1,240 @@
+# ============================================
+# Python
+# ============================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+pythonenv*
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+
+# Pyre type checker
+.pyre/
+
+# ============================================
+# Jupyter Notebook
+# ============================================
+.ipynb_checkpoints/
+*.ipynb~
+*.ipynb_checkpoints
+.ipynb_checkpoints/*
+~*.ipynb
+
+# Cell outputs (optional - uncomment if you want to strip outputs)
+# *.ipynb
+
+# ============================================
+# Data files (raw and processed)
+# ============================================
+# Raw data (large TSV files)
+data/raw/*.tsv
+data/raw/*.csv
+data/raw/*.txt
+data/raw/*.fasta
+data/raw/*.zip
+data/raw/*.gz
+
+# Processed data (can be regenerated)
+data/processed/*.npy
+data/processed/*.pkl
+data/processed/*.joblib
+data/processed/*.csv
+data/processed/*.h5
+data/processed/*.parquet
+
+# External data (downloaded)
+data/external/
+!data/external/.gitkeep
+
+# ============================================
+# Results and outputs
+# ============================================
+# All results (large outputs)
+results/
+!results/.gitkeep
+
+# Model artifacts
+*.h5
+*.hdf5
+*.pb
+*.caffemodel
+*.onnx
+*.pth
+*.pt
+
+# MCMC traces (large)
+*.nc
+*.netcdf
+*.hdf
+
+# ============================================
+# Configuration files with secrets
+# ============================================
+.env
+.venv
+env/
+.env.local
+.env.*.local
+*.key
+*.pem
+*.crt
+secrets/
+credentials.json
+service_account.json
+
+# ============================================
+# IDE and editor files
+# ============================================
+# VS Code
+.vscode/
+*.code-workspace
+.vscode/settings.json
+.vscode/launch.json
+.history/
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+.idea_modules/
+
+# Spyder
+.spyproject/
+.spyderproject
+.spyproject/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# RStudio
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# ============================================
+# OS generated files
+# ============================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.swp
+*.swo
+*~
+~$*
+desktop.ini
+$RECYCLE.BIN/
+
+# ============================================
+# Logs and databases
+# ============================================
+*.log
+*.sql
+*.sqlite
+*.db
+*.rdb
+*.ldb
+
+# ============================================
+# Temporary files
+# ============================================
+tmp/
+temp/
+*.tmp
+*.temp
+*.cache
+*.cached
+
+# ============================================
+# Project specific
+# ============================================
+# Large TSV files
+*.tsv
+!data/raw/sample.tsv  # Except small sample files
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Progress tracking
+*.progress.json
+
+# ============================================
+# Documentation build outputs
+# ============================================
+docs/_build/
+docs/api/
+site/
+
+# ============================================
+# DVC (Data Version Control)
+# ============================================
+.dvc/
+.dvc/tmp/
+.dvc/plots/
+*.dvc.lock
+
+# ============================================
+# Docker
+# ============================================
+.dockerignore
+Dockerfile
+docker-compose*.yml
+*.tar
+*.tar.gz
