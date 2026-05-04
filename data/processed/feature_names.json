@@ -1,0 +1,30 @@
+{
+  "feature_names": [
+    "Length",
+    "log_length",
+    "interaction_count",
+    "location_prior",
+    "domain_prior",
+    "combined_prior",
+    "gpcr_domain",
+    "ion_channel_domain",
+    "transporter_domain",
+    "receptor_domain",
+    "plasma_membrane",
+    "nucleus",
+    "cytoplasm",
+    "mitochondrion",
+    "er",
+    "secreted",
+    "has_interactions"
+  ],
+  "n_features": 17,
+  "train_shape": [
+    48000,
+    17
+  ],
+  "test_shape": [
+    12000,
+    17
+  ]
+}

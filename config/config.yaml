@@ -1,0 +1,37 @@
+# Project configuration
+project:
+  name: "TM Helix Prediction"
+  version: "1.0.0"
+  seed: 42
+
+data:
+  raw_path: "data/raw/uniprot_human_60k.tsv"
+  processed_path: "data/processed/"
+  test_size: 0.2
+  val_size: 0.1
+
+features:
+  numerical:
+    - "length"
+    - "interaction_partner_count"
+  categorical:
+    - "subcellular_location"
+    - "domain_family"
+  binary:
+    - "has_gpcr_domain"
+    - "is_membrane_protein"
+
+model:
+  type: "zero_inflated_poisson"  # or "negative_binomial"
+  priors:
+    intercept: {mu: 0, sigma: 1}
+    coefficients: {mu: 0, sigma: 0.5}
+  mcmc:
+    draws: 2000
+    tune: 1000
+    chains: 4
+    cores: 4
+
+evaluation:
+  metrics: ["mae", "rmse", "r2", "crps"]
+  save_predictions: true
