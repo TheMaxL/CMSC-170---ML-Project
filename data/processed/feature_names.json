@@ -3,9 +3,7 @@
     "Length",
     "log_length",
     "interaction_count",
-    "location_prior",
-    "domain_prior",
-    "combined_prior",
+    "has_interactions",
     "gpcr_domain",
     "ion_channel_domain",
     "transporter_domain",
@@ -16,15 +14,17 @@
     "mitochondrion",
     "er",
     "secreted",
-    "has_interactions"
+    "location_prior",
+    "domain_prior",
+    "combined_prior"
   ],
   "n_features": 17,
   "train_shape": [
-    48000,
+    160000,
     17
   ],
   "test_shape": [
-    12000,
+    40000,
     17
   ]
 }

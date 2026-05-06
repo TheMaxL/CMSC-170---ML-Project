@@ -6,12 +6,12 @@ from pathlib import Path
 def load_and_preview_original_data():
     """Load the original TSV and create readable summaries"""
     
-    print("="*60)
+    print("="*100)
     print("Creating Human-Readable Data Summary")
-    print("="*60)
+    print("="*100)
     
     # Load original TSV
-    tsv_path = 'data/raw/uniprot_human_60,000_entries.tsv'
+    tsv_path = 'data/raw/uniprot_human_200,000_entries.tsv'
     df = pd.read_csv(tsv_path, sep='\t')
     
     print(f"\nLoaded {len(df):,} proteins")
