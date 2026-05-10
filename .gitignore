@@ -91,6 +91,8 @@ data/processed/*.joblib
 data/processed/*.csv
 data/processed/*.h5
 data/processed/*.parquet
+!data/processed/X_train.csv
+!data/processed/y_train.csv
 
 # External data (downloaded)
 data/external/
