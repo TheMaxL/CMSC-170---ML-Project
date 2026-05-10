@@ -143,13 +143,16 @@ def main():
             return_inferencedata=True,
         )
 
-    combined = az.concat(idata, ppc, dim=None)
+    # FIX: use extend instead of concat to avoid overlapping groups error
+    idata.extend(ppc)
+    combined = idata
 
-    rhat_df = az.rhat(idata).to_dataframe().reset_index()
-    rhat_df.to_csv(output_dir / "rhat_diagnostics.csv", index=False)
+    # Use az.summary() to safely handle multidimensional parameters
+    summary_df = az.summary(idata, round_to=4)
+    summary_df.to_csv(output_dir / "rhat_diagnostics.csv")
 
-    ess_df = az.ess(idata).to_dataframe().reset_index()
-    ess_df.to_csv(output_dir / "ess_diagnostics.csv", index=False)
+    ess_df = summary_df[["ess_bulk", "ess_tail"]].copy()
+    ess_df.to_csv(output_dir / "ess_diagnostics.csv")
 
     loo_result = az.loo(idata, pointwise=True)
     waic_result = az.waic(idata, pointwise=True)
